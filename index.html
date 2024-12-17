@@ -2,35 +2,37 @@
 <html lang="en">
 <head>
 	<!-- Specifies the document type and language as English -->
-	<meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8 -->
-	<title>Weather App</title> <!-- Title of the webpage -->
-	<link rel="stylesheet" href="style.css"> <!-- Links the external stylesheet -->
+    <meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8 -->
+    <title>Weather App</title> <!-- Title of the webpage -->
+    <link rel="stylesheet" href="style.css"> <!-- Links the external stylesheet -->
 </head>
 <body>
 	<div class="container">
-		<!-- Main heading of the app -->
-		<h1>Weather App</h1>
+    	<!-- Main heading of the app -->
+    	<h1>Weather App</h1>
 
-		<!-- Input field for entering city name -->
-		<input type="text" id="locationInput" placeholder="Enter a city" list="citySuggestions"/>
-		<!-- Datalist to provide autocomplete suggestions for city names -->
-		<datalist id="citySuggestions"></datalist>
+    	<!-- Input field for entering city name -->
+    	<input type="text" id="locationInput" placeholder="Enter a city" list="citySuggestions"/>
+    	<!-- Datalist to provide autocomplete suggestions for city names -->
+    	<datalist id="citySuggestions"></datalist>
 
-		<!-- Button to trigger weather search -->
-		<button id="searchButton">Search</button>
+    	<!-- Button to trigger weather search -->
+    	<button id="searchButton">Search</button>
 
-		<!-- Toggle to switch between metric and imperial units -->
-		<div class="toggle">
-			<label>
-				  <input type="checkbox" id="unitToggle"> Metric
-			</label>
-		</div>
+    	<!-- Toggle to switch between metric and imperial units -->
+    	<div class="toggle">
+        	<label>
+                <input type="checkbox" id="unitToggle"> Metric
+        	</label>
+    	</div>
 
-		<!-- Div to display the fetched weather information -->
-		<div id="weatherInfo"></div>
+    	<!-- Div to display the fetched weather information -->
+    	<div id="weatherInfo"></div>
 	</div>
 
+	<!-- Load your_config.js first -->
+	<script src="your_config.js"></script>
 	<!-- Links the external JavaScript file -->
-	<script src="app.js"></script>	  
+	<script src="app.js"></script>   
 </body>
 </html>

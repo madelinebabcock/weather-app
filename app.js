@@ -16,7 +16,7 @@ const stateAbbreviations = {
 };
 
 // API key for accessing the OpenWeatherMap API
-const apiKey = "a70093423265d596e6cd4f26eb30f739";
+const apiKey = config.apiKey;
 
 // Input field for user to enter a city/location name
 const locationInput = document.getElementById("locationInput");
