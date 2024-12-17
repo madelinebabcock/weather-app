@@ -2,21 +2,34 @@ const apiKey = "a70093423265d596e6cd4f26eb30f739";
 let latestWeatherData = null;
 
 document.getElementById("searchButton").addEventListener("click", function() {
-	const city = document.getElementById("cityInput").value;
-	if (city) {
-		fetchWeather(city);
+	const location = document.getElementById("locationInput").value;
+	if (location) {
+		fetchWeather(location);
 	} else {
 		alert("Please enter a city name!");
 	}
 });
   
-function fetchWeather(city) {
-	const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+function fetchWeather(location) {
+	const locationParts = location.split(",");
+	let city = locationParts[0].trim();
+	let countryOrState = locationParts[1] ? locationParts[1].trim() : "";
+	let country = locationParts[2] ? locationParts[2].trim() : "";
+
+	let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}`;
+	if (countryOrState) {
+		apiUrl += `,${countryOrState}`;
+	}
+	if (country) {
+		apiUrl += `,${country}`;
+	}
+
+	apiUrl += `&appid=${apiKey}&units=imperial`
 
 	fetch(apiUrl)
 		.then(response => {
 			if (!response.ok) {
-				throw new Error("City not found");
+				throw new Error("Location not found");
 			}
 			return response.json();
 		})
