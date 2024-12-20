@@ -9,7 +9,8 @@
 <body>
 	<div class="container">
 		<h1>Weather App</h1>
-		<input type="text" id="locationInput" placeholder="Enter a city, state (optional), and country (optional)" />
+		<input type="text" id="locationInput" placeholder="Enter a city" list="citySuggestions"/>
+		<datalist id="citySuggestions"></datalist>
 		<button id="searchButton">Search</button>
 		<div class="toggle">
 			<label>
