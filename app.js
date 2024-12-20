@@ -80,7 +80,11 @@ function fetchWeather(location) {
 	const locationParts = location.split(","); // Split input into parts
 	let city = locationParts[0].trim();
 	let countryOrState = locationParts[1] ? locationParts[1].trim() : "";
-	let country = locationParts[2] ? locationParts[2].trim() : "";
+	let country = locationParts[2] ? locationParts[2].trim() : "US";
+
+	if (countryOrState && stateAbbreviations[countryOrState]) {
+		countryOrState = stateAbbreviations[countryOrState];
+	}
 
 	// Map state names to their abbreviations if applicable
 	if (countryOrState && stateAbbreviations[countryOrState]) {
