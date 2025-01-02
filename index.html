@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Weather App</title>
-	<link rel="stylesheet" href="style.css">
+	<!-- Specifies the document type and language as English -->
+	<meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8 -->
+	<title>Weather App</title> <!-- Title of the webpage -->
+	<link rel="stylesheet" href="style.css"> <!-- Links the external stylesheet -->
 </head>
 <body>
 	<div class="container">
+		<!-- Main heading of the app -->
 		<h1>Weather App</h1>
+
+		<!-- Input field for entering city name -->
 		<input type="text" id="locationInput" placeholder="Enter a city" list="citySuggestions"/>
+		<!-- Datalist to provide autocomplete suggestions for city names -->
 		<datalist id="citySuggestions"></datalist>
+
+		<!-- Button to trigger weather search -->
 		<button id="searchButton">Search</button>
+
+		<!-- Toggle to switch between metric and imperial units -->
 		<div class="toggle">
 			<label>
 				  <input type="checkbox" id="unitToggle"> Metric
 			</label>
 		</div>
+
+		<!-- Div to display the fetched weather information -->
 		<div id="weatherInfo"></div>
 	</div>
+
+	<!-- Links the external JavaScript file -->
 	<script src="app.js"></script>	  
 </body>
 </html>
