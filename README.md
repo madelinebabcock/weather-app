@@ -24,7 +24,9 @@ The Weather App is a simple web application that allows users to search for and 
 ## Setup
 
 1. Clone the repository: `git clone https://github.com/your-username/weather-app.git`
-2. Navigate to the project directory: `cd weather-app`
+2. Create an API key on OpenWeather API.
+3. Navigate to the project directory: `cd weather-app`
+4. Copy and paste your key into the `your_config.js` file where it says "YOUR_API_KEY".
 3. Open `index.html` in a browser.
 
 ## Usage
